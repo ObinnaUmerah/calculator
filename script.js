@@ -14,6 +14,27 @@ function divide(x, y) {
     return x / y;
 }
 
-console.log(add(1, 2));
-console.log(subtract(5, 2));
-console.log(divide(2, 2));;
+let firstNum = 0;
+let operator;
+let secondNum = 0;
+
+function operate(x, y, op) {
+    switch (op) {
+        case '+':
+            add(x, y);
+        break;
+
+        case '-':
+            subtract(x, y);
+        break;
+        
+        case '*':
+            multiply(x, y);
+        break;
+
+        case '/':
+            divide(x, y);
+        break;
+
+    }
+}
