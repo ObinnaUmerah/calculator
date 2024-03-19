@@ -14,6 +14,7 @@ function divide(x, y) {
     return x / y;
 }
 
+//Will be used to display numbers later
 let firstNum = 0;
 let operator;
 let secondNum = 0;
