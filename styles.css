@@ -24,10 +24,15 @@ body{
     height: 80px;
 }
 
-/* .buttons{
+.button{
+    width: 15%;
+    height: 60px;
+    margin: 5px;
+}
+
+.buttons{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 0px;
+    flex-wrap: wrap;
     
-} */
+    
+}
