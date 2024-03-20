@@ -4,6 +4,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: lightblue;
     
 }
 .calculator{
@@ -11,11 +12,13 @@ body{
     width: 500px;
     height: 500px;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 .display{
-    background-color: lightblue;
-    width: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 100vh;
     height: 80px;
 }
