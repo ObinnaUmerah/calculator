@@ -25,14 +25,26 @@ body{
 }
 
 .button{
-    width: 15%;
-    height: 60px;
+    width: calc(33.33% - 10px);
+    height: 85px;
     margin: 5px;
 }
 
 .buttons{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
     
     
+}
+
+.middle{
+    display: flex;
+}
+
+.operands{
+    background-color: lightgray;
+    width: 30%;
+    height: 80px;
 }
