@@ -16,7 +16,7 @@ body{
     flex-direction: column;
 }
 
-.display{
+#display{
     display: flex;
     justify-content: center;
     background-color: white;
@@ -24,9 +24,9 @@ body{
     height: 80px;
 }
 
-.button{
+.digit{
     width: calc(33.33% - 10px);
-    height: 85px;
+    height: 95px;
     margin: 5px;
 }
 
@@ -41,15 +41,22 @@ body{
 
 .middle{
     display: flex;
+    height: 85%;
 }
 
 .operands{
     display: flex;
     flex-direction: column;
     width: 30%;
+    margin: 5px;
 }
 
 /* Not pretty but I'll make adjustments later */
 .op{
     height: 100%;
+}
+
+#clear{
+    margin: 10px;
+    width: 70%;
 }
