@@ -1,50 +1,37 @@
 const digits = document.querySelectorAll(".digit")
 const screen = document.querySelector("#display")
-const operands = document.querySelectorAll("op")
-const solve = document.querySelector("solve")
-const operator = '';
-const firstNumber = 0;
-const secondNumber = 0;
+const operands = document.querySelectorAll(".op")
+const solve = document.querySelector("#solve")
+let operator = '';
+let firstNumber = '';
+let secondNumber = '';
 
 digits.forEach(digit => {
     digit.addEventListener('click', () => {
         if(operator === ''){
-        // Store the clicked number into a variable
-        const clickedNumber = digit.innerHTML;
-        // Update the display
-        screen.innerHTML += clickedNumber; // Append the clicked number to the display content
-        // Store the displayed number into a variable
-        firstNumber = screen.innerHTML;
+            firstNumber += digit.textContent;
+            screen.textContent += digit.textContent;
     } else {
-        // Store the clicked number into a variable
-        const clickedNumber = digit.innerHTML;
-        // Update the display
-        screen.innerHTML += clickedNumber; // Append the clicked number to the display content
-        // Store the displayed number into a variable
-        secondNumber = screen.innerHTML;
+        secondNumber += digit.textContent;
+        screen.textContent += digit.textContent;
     }
         });
-    // digit.addEventListener('click', () => {
-    //     // Store the clicked number into a variable
-    //     const clickedNumber = digit.innerHTML;
-    //     // Update the display
-    //     screen.innerHTML += clickedNumber; // Append the clicked number to the display content
-    //     // Store the displayed number into a variable
-    //     firstNumber = screen.innerHTML;
-    // });
+    
 });
 
 operands.forEach(operand => {
     operand.addEventListener('click', () => {
-        operator = operand.innerHTML;
-        //Call the operate function(Make new event listener for operator)
+        // Store the selected operator
+        operator = operand.textContent;
+        // Update the display with the selected operator
+        screen.textContent += operand.textContent;
+        // Clear the firstNumber to allow for the entry of the second number
+        firstNumber = '';
+    });
+});
 
-    })
-    //Another event listener for solving?
-        solve.addEventListener('click', () => {
-            operate(firstNumber, secondNumber, operator);
-        });
-
+solve.addEventListener('click', () => {
+    
 })
 
 function add(x, y) {
